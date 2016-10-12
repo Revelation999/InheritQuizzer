@@ -1,12 +1,8 @@
-import java.util.ArrayList;
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 import java.util.Scanner;
 public class Quizzer
 	{
 		static Scanner userInput = new Scanner(System.in);
-		private static final long serialVersionUID = 1L;
 		static JFrame frame = new JFrame();
 		public static void main(String[]arg)
 		{
