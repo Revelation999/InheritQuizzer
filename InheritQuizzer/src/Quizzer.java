@@ -8,7 +8,7 @@ public class Quizzer
 		{
 			int point = 0;
 			Generate.generate();
-			Object option[] = {"The star lives.", "The star dies.", "The dwarf star lives.", "The dwarf star dies.", "ERROR"};
+			Object[] option = (Object[]) Generate.answer;
 			System.out.println(
 			"public class Star\n"
 			+"	{\n"
@@ -52,10 +52,11 @@ public class Quizzer
 						}
 					else
 						{
-							JOptionPane.showMessageDialog(frame, "Wrong!");
+							JOptionPane.showMessageDialog(frame, "Wrong! The correct answer is "+Generate.list.get(i).getAnswer());
 						}
 					Generate.list.remove(i);
 				}while(Generate.list.size()>12-times);
 			JOptionPane.showMessageDialog(frame, "Your point is "+point);
+			System.exit(0);
 		}
 	}
